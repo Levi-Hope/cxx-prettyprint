@@ -89,7 +89,7 @@ namespace pretty_print
     struct delimiters
     {
         using type = delimiters_values<TChar>;
-        static const type values; 
+        static const type values;
     };
 
 
@@ -246,9 +246,9 @@ namespace pretty_print
     // Default delimiters
 
     template <typename T> struct delimiters<T, char> { static const delimiters_values<char> values; };
-    template <typename T> const delimiters_values<char> delimiters<T, char>::values = { "[", ", ", "]" };
+    template <typename T> const delimiters_values<char> delimiters<T, char>::values = { "{", ", ", "}" };
     template <typename T> struct delimiters<T, wchar_t> { static const delimiters_values<wchar_t> values; };
-    template <typename T> const delimiters_values<wchar_t> delimiters<T, wchar_t>::values = { L"[", L", ", L"]" };
+    template <typename T> const delimiters_values<wchar_t> delimiters<T, wchar_t>::values = { L"{", L", ", L"}" };
 
 
     // Delimiters for (multi)set and unordered_(multi)set
