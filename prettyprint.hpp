@@ -469,8 +469,8 @@ namespace std
 
 
 // void print(...);  print variables name and value
-#define GET_MACRO(_0,_1,_2,_3,_4,_5,NAME,...) NAME
-#define print(...) GET_MACRO(print0, ##__VA_ARGS__, print5, print4, print3, print2, print1, print0)(__VA_ARGS__)
+#define GET_MACRO(_0,_1,_2,_3,_4,_5,_6,NAME,...) NAME
+#define print(...) GET_MACRO(print0, ##__VA_ARGS__, print6, print5, print4, print3, print2, print1, print0)(__VA_ARGS__)
 #define print0() \
     do { cout << endl; } while(false)
 #define print1(a) \
@@ -483,6 +483,8 @@ namespace std
     do { auto _a = (a); auto _b = (b); auto _c = (c); auto _d = (d); cout << #a " = " << (_a) << ", " << #b " = " << (_b) << ", " << #c " = " << (_c) << ", " << #d " = " << (_d) << endl; } while(false)
 #define print5(a, b, c, d, e) \
     do { auto _a = (a); auto _b = (b); auto _c = (c); auto _d = (d); auto _e = (e); cout << #a " = " << (_a) << ", " << #b " = " << (_b) << ", " << #c " = " << (_c) << ", " << #d " = " << (_d) << ", " << #e " = " << (_e) << endl; } while(false)
+#define print6(a, b, c, d, e, f) \
+    do { auto _a = (a); auto _b = (b); auto _c = (c); auto _d = (d); auto _e = (e); auto _f = (f); cout << #a " = " << (_a) << ", " << #b " = " << (_b) << ", " << #c " = " << (_c) << ", " << #d " = " << (_d) << ", " << #e " = " << (_e) << ", " << #f " = " << (_f) << endl; } while(false)
 // reference1: https://stackoverflow.com/questions/6622962/generic-way-to-print-out-variable-name-in-c
 // reference2: https://stackoverflow.com/questions/11761703/overloading-macro-on-number-of-arguments
 
